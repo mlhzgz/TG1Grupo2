@@ -1,0 +1,17 @@
+# Partes del proyecto
+
+    # Estructuras de datos
+
+    # Estructuras de codigo
+        # actividades
+            # ListView?
+            # RecyclerView?
+            # Formulario?
+                # controles?
+
+        # adapters
+        # servicios
+        # logica de negocio (toda la programacion que organiza el funcionamiento de la aplicacion) (interface)
+        # ...
+
+    # Descripcion del proyecto (que efecto va a tener cada error o cada acierto dentro de la aplicacion)
