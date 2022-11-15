@@ -1,0 +1,19 @@
+
+____:PROYECTO ANIFLIX:____
+
+1.- EQUIPO DE DESAROLLO
+
+	Sergio Alejaldre
+	Diego Urmente
+	Daniel Giménez
+	Guillermo Fabián (Jefe de equipo)
+
+2.- DATOS DE LA APLICACION
+
+Nuestra aplicacion constara de los siguientes elementos:
+
+	3 Actividades:(Pantalla Principal(SPLASH) / Lista / Datos_Serie).
+	3 Clases:(Objeto Serie / Adaptador / Metodos)
+	1 Layout para crear la lista del Recycler
+	1 AlertDialos para las Puntuaciones
+		
