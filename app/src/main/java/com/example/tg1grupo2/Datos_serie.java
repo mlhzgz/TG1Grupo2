@@ -34,7 +34,7 @@ public class Datos_serie extends AppCompatActivity {
 
         int serieselec = 0; //<----- este valor lo tiene q traer el INTENT
         Serie serie = metodos.suichdeseries(serieselec);
-        
+
         //Cargar la imagen de la serie
 
         int idImg = serie.getIdimagen();
@@ -55,8 +55,7 @@ public class Datos_serie extends AppCompatActivity {
 
         //Para cargar las temporadas de las series
 
-        int numeroTemporadas = 0;
-        numeroTemporadas = serie.getNumerotemporadas();
+        int numeroTemporadas = serie.getNumerotemporadas();
 
         String[] temporadaaas = new String[numeroTemporadas];
 
