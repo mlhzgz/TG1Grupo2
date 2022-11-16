@@ -3,20 +3,29 @@ package com.example.tg1grupo2.Objserie;
 import java.util.ArrayList;
 
 public class Serie {
-
-    ArrayList<String>nombretemporadas;
     String Titulo,Descripcion;
+    ArrayList<String>nombretemporadas;
     int año,numerotemporadas,idimagen,puntuacion;
+    int[] capitulosxtemporadas;
 
 
-    public Serie(String titulo, String descripcion, ArrayList<String> nombretemporadas, int año, int numerotemporadas, int idimagen, int puntuacion) {
-        Titulo = titulo;
-        Descripcion = descripcion;
+    public Serie(String titulo, String descripcion, ArrayList<String> nombretemporadas, int año, int numerotemporadas, int idimagen, int puntuacion, int[] capitulosxtemporadas) {
+        this.Titulo = titulo;
+        this.Descripcion = descripcion;
         this.nombretemporadas = nombretemporadas;
         this.año = año;
         this.numerotemporadas = numerotemporadas;
         this.idimagen = idimagen;
         this.puntuacion = puntuacion;
+        this.capitulosxtemporadas = capitulosxtemporadas;
+    }
+
+    public int[] getCapitulosxtemporadas() {
+        return capitulosxtemporadas;
+    }
+
+    public void setCapitulosxtemporadas(int[] capitulosxtemporadas) {
+        this.capitulosxtemporadas = capitulosxtemporadas;
     }
 
     public String getTitulo() {
