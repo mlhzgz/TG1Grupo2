@@ -4,14 +4,19 @@
 
     # Estructuras de codigo
         # actividades
-            # ListView?
-            # RecyclerView?
-            # Formulario?
-                # controles?
+
+            Main_Activity:
+                Una pantalla principal que usaremos como Splash con un Titulo para nuestra Aplicacion
+
+            Lista_Activity
+                Una pantalla donde se mostrara un Recycler View para mostrar una lista de series
+
+            Datos_Serie
+                Una pantalla que mostrara todos los datos de una serie, esta pantalla contiene un Alertdialog para las puntuaciones de las series
 
         # adapters
-        # servicios
+            Tenemos una Clase Adaptadores en un paquete a parte y una Clase Mtodos para organizar ahi el codigo
+
         # logica de negocio (toda la programacion que organiza el funcionamiento de la aplicacion) (interface)
-        # ...
 
     # Descripcion del proyecto (que efecto va a tener cada error o cada acierto dentro de la aplicacion)
