@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,59 +34,12 @@ public class Datos_serie extends AppCompatActivity {
         EditText capsTemporadas = findViewById(R.id.txtCapsTemp);
         ImageView imgEstrellas = findViewById(R.id.imgEstrellas);
 
-        int serieselec = 0; //<----- este valor lo tiene q traer el INTENT
+        int serieselec = 10; //<----- este valor lo tiene q traer el INTENT
 
         Serie serie = metodos.suichdeseries(serieselec);
 
         metodos.cargardatosdelaserie(serie,nombre,anyoEmision,descripcion,temporadas,capsTemporadas,imgPortada);
-    /*    //Cargar la imagen de la serie
 
-        int idImg = serie.getIdimagen();
-
-        imgPortada.setImageResource(idImg);
-
-        //Para cargar el año de emision de la serie
-
-        String añoEmision = String.valueOf(serie.getAño());
-
-        nombre.setText(serie.getTitulo());
-        anyoEmision.setText(añoEmision);
-
-        //Para cargar la descripicon de la serie
-
-        descripcion.setText(serie.getDescripcion());
-        descripcion.setFocusable(false);
-
-        //Para cargar las temporadas de las series
-
-        int numeroTemporadas = serie.getNumerotemporadas();
-
-        String[] temporadaaas = new String[numeroTemporadas];
-
-        String temporadasPrimeraSerie = "";
-
-        for(int j = 0; j < numeroTemporadas; j++){
-            temporadaaas[j] = String.valueOf(serie.getNombretemporadas());
-
-            temporadas.setText("\n" + temporadaaas[j] );
-        }
-        //temporadasPrimeraSerie = String.valueOf(series.get(9).getNombretemporadas());
-
-
-        temporadas.setFocusable(false);
-
-        //Para cargar los capitulos de las temporadas
-
-        int[] capTemp = serie.getCapitulosxtemporadas();
-
-        String caps = "";
-
-        for(int i = 0; i < serie.getNumerotemporadas(); i++){
-            caps = caps + String.valueOf("\n" + capTemp[i]);
-        }
-        capsTemporadas.setText(caps);
-        capsTemporadas.setFocusable(false);
-*/
         //Alert dialog de puntuaciones
         imgEstrellas.setOnClickListener(v ->{
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
@@ -110,18 +64,7 @@ public class Datos_serie extends AppCompatActivity {
 
                    serie.setPuntuacion(nuevapuntuacion);
 
-                   /* if(radio1.isChecked())
-                        imgEstrellas.setImageResource(R.drawable.imgunaestrella);
-                    else if(radio2.isChecked()){
-                        imgEstrellas.setImageResource(R.drawable.imgdosestrellas);
-                    } else if(radio3.isChecked()){
-                        imgEstrellas.setImageResource(R.drawable.imgtresestrellas);
-                    } else if(radio4.isChecked()){
-                        imgEstrellas.setImageResource(R.drawable.imgcuatroestrellas);
-                    } else if(radio5.isChecked()){
-                        imgEstrellas.setImageResource(R.drawable.imgcincoestrellas);
-                    }*/
-                    Toast.makeText( Datos_serie.this,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
+                   Toast.makeText( Datos_serie.this,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
                 }
             });
 
@@ -134,10 +77,7 @@ public class Datos_serie extends AppCompatActivity {
                     Toast.makeText( Datos_serie.this,"Puntuacion Borrada",Toast.LENGTH_LONG).show();
                 }
             });
-        /*    alertDialog.setOnCancelListener(dialogInterface -> {
 
-
-            });*/
             alertDialog.show();
         });
     }
