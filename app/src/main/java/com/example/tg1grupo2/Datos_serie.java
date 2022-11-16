@@ -34,7 +34,8 @@ public class Datos_serie extends AppCompatActivity {
         EditText capsTemporadas = findViewById(R.id.txtCapsTemp);
         ImageView imgEstrellas = findViewById(R.id.imgEstrellas);
 
-        int serieselec = 10; //<----- este valor lo tiene q traer el INTENT
+        Intent intent = getIntent();
+        int serieselec = intent.getIntExtra("cero", 0);   //<----- este valor lo tiene q traer el INTENT
 
         Serie serie = metodos.suichdeseries(serieselec);
 
