@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.tg1grupo2.Metodos.metodos;
 import com.example.tg1grupo2.Objserie.Serie;
@@ -33,9 +34,11 @@ public class Datos_serie extends AppCompatActivity {
         ImageView imgEstrellas = findViewById(R.id.imgEstrellas);
 
         int serieselec = 0; //<----- este valor lo tiene q traer el INTENT
+
         Serie serie = metodos.suichdeseries(serieselec);
 
-        //Cargar la imagen de la serie
+        metodos.cargardatosdelaserie(serie,nombre,anyoEmision,descripcion,temporadas,capsTemporadas,imgPortada);
+    /*    //Cargar la imagen de la serie
 
         int idImg = serie.getIdimagen();
 
@@ -82,9 +85,8 @@ public class Datos_serie extends AppCompatActivity {
         }
         capsTemporadas.setText(caps);
         capsTemporadas.setFocusable(false);
-
-
-        //Alert dialog
+*/
+        //Alert dialog de puntuaciones
         imgEstrellas.setOnClickListener(v ->{
             AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
             alertDialog.setTitle("Puntue la serie");
@@ -104,7 +106,11 @@ public class Datos_serie extends AppCompatActivity {
                     RadioButton radio4 = vista.findViewById(R.id.radio4);
                     RadioButton radio5 = vista.findViewById(R.id.radio5);
 
-                    if(radio1.isChecked())
+                   int nuevapuntuacion = metodos.cambiodefotoestrellas(serie.getPuntuacion(), imgEstrellas,radio1,radio2,radio3,radio4,radio5);
+
+                   serie.setPuntuacion(nuevapuntuacion);
+
+                   /* if(radio1.isChecked())
                         imgEstrellas.setImageResource(R.drawable.imgunaestrella);
                     else if(radio2.isChecked()){
                         imgEstrellas.setImageResource(R.drawable.imgdosestrellas);
@@ -114,17 +120,25 @@ public class Datos_serie extends AppCompatActivity {
                         imgEstrellas.setImageResource(R.drawable.imgcuatroestrellas);
                     } else if(radio5.isChecked()){
                         imgEstrellas.setImageResource(R.drawable.imgcincoestrellas);
-                    }
+                    }*/
+                    Toast.makeText( Datos_serie.this,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
                 }
             });
 
-            alertDialog.setOnCancelListener(dialogInterface -> {
-               imgEstrellas.setImageResource(R.drawable.imgceroestrellas);
-            });
+            alertDialog.setNegativeButton("Borrar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
 
+                    serie.setPuntuacion(0);
+                    imgEstrellas.setImageResource(R.drawable.imgceroestrellas);
+                    Toast.makeText( Datos_serie.this,"Puntuacion Borrada",Toast.LENGTH_LONG).show();
+                }
+            });
+        /*    alertDialog.setOnCancelListener(dialogInterface -> {
+
+
+            });*/
             alertDialog.show();
         });
-
-
     }
 }
