@@ -29,95 +29,122 @@ public class metodos {
     //SERIE 2
 
     descripcion = "Un anime isekai de tematica oscura donde nuestro protagonista se reencarnara como un Undead en un mundo de fantasia basado en un videojuego";
-    temporadas.clear();
-    temporadas.add("Overlord");
-    temporadas.add("Overlord II");
-    temporadas.add("Overlord III");
-    temporadas.add("Overlord IV");
+
+    ArrayList<String> temporadas2 = new ArrayList<>();
+
+
+    temporadas2.add("Overlord");
+    temporadas2.add("Overlord II");
+    temporadas2.add("Overlord III");
+    temporadas2.add("Overlord IV");
     capxtemp = new int[]{13,13,13,13};
 
-    Serie serie2= new Serie("Overlord",descripcion,temporadas,2015,4,R.drawable.overlord,0,capxtemp);
+    Serie serie2= new Serie("Overlord",descripcion,temporadas2,2015,4,R.drawable.overlord,0,capxtemp);
 
     //SERIE 3
 
     descripcion = "Un anime de accion y violencia que nos presenta a una organizacion que se dedica a cazar vampiros";
-    temporadas.clear();
-    temporadas.add("Hellsing Ultimate");
+
+
+    ArrayList<String> temporadas3 = new ArrayList<>();
+
+    temporadas3.add("Hellsing Ultimate");
     capxtemp = new int[]{10};
 
-    Serie serie3= new Serie("Hellsing Ultimate",descripcion,temporadas,2006,1,R.drawable.hellsing,0,capxtemp);
+    Serie serie3= new Serie("Hellsing Ultimate",descripcion,temporadas3,2006,1,R.drawable.hellsing,0,capxtemp);
 
     //SERIE 4
 
     descripcion = "Un anime de thriller y misterio donde un medico se vera envuelto en un caso de asesinatos en serie";
-    temporadas.clear();
-    temporadas.add("Monster");
+
+
+    ArrayList<String> temporadas4 = new ArrayList<>();
+
+    temporadas4.add("Monster");
     capxtemp = new int[]{74};
 
-    Serie serie4= new Serie("Monster",descripcion,temporadas,2004,1,R.drawable.monster,0,capxtemp);
+    Serie serie4= new Serie("Monster",descripcion,temporadas4,2004,1,R.drawable.monster,0,capxtemp);
 
     //Serie 5
 
     descripcion = "Un anime de accion y ciencia ficcion donde un joven maquinará un elaborado plan para revelarse contra la tirania de un imperio";
-    temporadas.clear();
-    temporadas.add("Code Geass: Hangyaku no Lelouch");
-    temporadas.add("Code Geass: Hangyaku no Lelouch R2");
+
+
+    ArrayList<String> temporadas5 = new ArrayList<>();
+
+    temporadas5.add("Code Geass: Hangyaku no Lelouch");
+    temporadas5.add("Code Geass: Hangyaku no Lelouch R2");
     capxtemp = new int[]{25,25};
 
-    Serie serie5= new Serie("Code Geass: Hangyaku no Lelouch",descripcion,temporadas,2006,2,R.drawable.codegeas,0,capxtemp);
+    Serie serie5= new Serie("Code Geass: Hangyaku no Lelouch",descripcion,temporadas5,2006,2,R.drawable.codegeas,0,capxtemp);
 
     //Serie 6
 
     descripcion = "Un anime de misterio donde nos presentaran al Detective de Preparatoria Shinichi Kudo y su objetivo de desenmascarar una peligrosa mafia";
-    temporadas.clear();
-    temporadas.add("Detective Conan");
+
+
+    ArrayList<String> temporadas6 = new ArrayList<>();
+
+    temporadas6.add("Detective Conan");
     capxtemp = new int[]{1050};
 
-    Serie serie6= new Serie("Detective Conan",descripcion,temporadas,1996,1,R.drawable.detectiveconan,0,capxtemp);
+    Serie serie6= new Serie("Detective Conan",descripcion,temporadas6,1996,1,R.drawable.detectiveconan,0,capxtemp);
 
     //Serie 7
 
     descripcion = "Un anime de accion y disparos donde conoceremos a un grupo de cazarecompensas y su dia a dia lidiando con mafias y bandas";
-    temporadas.clear();
-    temporadas.add("Black Lagoon");
-    temporadas.add("Black Lagoon: The Second Barrage");
-    temporadas.add("Black Lagoon: Roberta's Blood Trail");
+
+
+    ArrayList<String> temporadas7 = new ArrayList<>();
+
+    temporadas7.add("Black Lagoon");
+    temporadas7.add("Black Lagoon: The Second Barrage");
+    temporadas7.add("Black Lagoon: Roberta's Blood Trail");
     capxtemp = new int[]{12,12,5};
 
-    Serie serie7= new Serie("Black Lagoon",descripcion,temporadas,2006,3,R.drawable.blacklaggon,0,capxtemp);
+    Serie serie7= new Serie("Black Lagoon",descripcion,temporadas7,2006,3,R.drawable.blacklaggon,0,capxtemp);
 
     //Serie 8
 
     descripcion = "Un anime de comedia donde un jefe de la yakuza retirado intenta llevar una vida normal junto a su esposa";
-    temporadas.clear();
-    temporadas.add("Gokushufudou");
-    temporadas.add("Gokushufudou Part 2");
+
+
+    ArrayList<String> temporadas8 = new ArrayList<>();
+
+    temporadas8.add("Gokushufudou");
+    temporadas8.add("Gokushufudou Part 2");
     capxtemp = new int[]{5,5};
 
-    Serie serie8= new Serie("Gokushufudou",descripcion,temporadas,2021,2,R.drawable.yakuza,0,capxtemp);
+    Serie serie8= new Serie("Gokushufudou",descripcion,temporadas8,2021,2,R.drawable.yakuza,0,capxtemp);
 
     //serie 9
 
     descripcion = "Un anime de accion ambientado en el japon feudal que nos cuenta la historia de un joven maldito pot un demonio";
-    temporadas.clear();
-    temporadas.add("Dororo");
+
+
+    ArrayList<String> temporadas9 = new ArrayList<>();
+
+    temporadas9.add("Dororo");
     capxtemp = new int[]{24};
 
-    Serie serie9= new Serie("Dororo",descripcion,temporadas,2021,1,R.drawable.dororo,0,capxtemp);
+    Serie serie9= new Serie("Dororo",descripcion,temporadas9,2021,1,R.drawable.dororo,0,capxtemp);
 
     //Serie 10
 
     descripcion = "Un anime de carreras clandestinas de coches";
-    temporadas.clear();
-    temporadas.add("Initial D First Stage");
-    temporadas.add("Initial D Second Stage");
-    temporadas.add("Initial D Third Stage");
-    temporadas.add("Initial D Fourth Stage");
-    temporadas.add("Initial D Fifth Stage");
-    temporadas.add("Initial D Final Stage");
+
+
+    ArrayList<String> temporadas10 = new ArrayList<>();
+
+    temporadas10.add("Initial D First Stage");
+    temporadas10.add("Initial D Second Stage");
+    temporadas10.add("Initial D Third Stage");
+    temporadas10.add("Initial D Fourth Stage");
+    temporadas10.add("Initial D Fifth Stage");
+    temporadas10.add("Initial D Final Stage");
     capxtemp = new int[]{26,13,1,24,14,4};
 
-    Serie serie10= new Serie("Initial D",descripcion,temporadas,1998,6,R.drawable.intiald,0,capxtemp);
+    Serie serie10= new Serie("Initial D",descripcion,temporadas10,1998,6,R.drawable.intiald,0,capxtemp);
 
     //Añadimos las series
 
@@ -136,9 +163,6 @@ public class metodos {
 }
 
 
-
-
-
 // Metodos para la Clase DATOS_SERIES
 
     //Cambiar la puntuacion de una serie
@@ -150,7 +174,7 @@ public class metodos {
     }
 
     //Cambiar la foto de las estrellas
-    public static void cambiodefoto(ImageView imagen,int puntos){
+    /*public static void cambiodefoto(ImageView imagen,int puntos){
 
         if(puntos==5){imagen.setImageResource(R.drawable);}
         else if(puntos==4){imagen.setImageResource(R.drawable);}
@@ -160,12 +184,12 @@ public class metodos {
         else{imagen.setImageResource(R.drawable);}
 
 
-    }
+    }*/
 
-    //Hacer un Toas para indicar que se ha registrado la puntuacion
-    public static void mensajedepuntuacion(Class clase){
+    //Hacer un Toast para indicar que se ha registrado la puntuacion
+    /*public static void mensajedepuntuacion(Class clase){
 
         Toast.makeText( clase,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
 
-    }
+    }*/
 }
