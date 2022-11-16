@@ -4,6 +4,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.tg1grupo2.Objserie.Serie;
+import com.example.tg1grupo2.R;
 
 import java.util.ArrayList;
 
@@ -23,7 +24,7 @@ public class metodos {
 
     int[] capxtemp = {12 , 1};
 
-    Serie serie1 = new Serie("Youjo Senki",descripcion, temporadas,2017,2,,0,capxtemp);
+    Serie serie1 = new Serie("Youjo Senki",descripcion, temporadas,2017,2,R.drawable.youjosenki,0,capxtemp);
 
     //SERIE 2
 
@@ -35,7 +36,7 @@ public class metodos {
     temporadas.add("Overlord IV");
     capxtemp = new int[]{13,13,13,13};
 
-    Serie serie2= new Serie("Overlord",descripcion,temporadas,2015,4,,0,capxtemp);
+    Serie serie2= new Serie("Overlord",descripcion,temporadas,2015,4,R.drawable.overlord,0,capxtemp);
 
     //SERIE 3
 
@@ -44,7 +45,7 @@ public class metodos {
     temporadas.add("Hellsing Ultimate");
     capxtemp = new int[]{10};
 
-    Serie serie3= new Serie("Hellsing Ultimate",descripcion,temporadas,2006,1,,0,capxtemp);
+    Serie serie3= new Serie("Hellsing Ultimate",descripcion,temporadas,2006,1,R.drawable.hellsing,0,capxtemp);
 
     //SERIE 4
 
@@ -53,7 +54,7 @@ public class metodos {
     temporadas.add("Monster");
     capxtemp = new int[]{74};
 
-    Serie serie4= new Serie("Monster",descripcion,temporadas,2004,1,,0,capxtemp);
+    Serie serie4= new Serie("Monster",descripcion,temporadas,2004,1,R.drawable.monster,0,capxtemp);
 
     //Serie 5
 
@@ -63,7 +64,7 @@ public class metodos {
     temporadas.add("Code Geass: Hangyaku no Lelouch R2");
     capxtemp = new int[]{25,25};
 
-    Serie serie5= new Serie("Code Geass: Hangyaku no Lelouch",descripcion,temporadas,2006,2,,0,capxtemp);
+    Serie serie5= new Serie("Code Geass: Hangyaku no Lelouch",descripcion,temporadas,2006,2,R.drawable.codegeas,0,capxtemp);
 
     //Serie 6
 
@@ -72,7 +73,7 @@ public class metodos {
     temporadas.add("Detective Conan");
     capxtemp = new int[]{1050};
 
-    Serie serie6= new Serie("Detective Conan",descripcion,temporadas,1996,1,,0,capxtemp);
+    Serie serie6= new Serie("Detective Conan",descripcion,temporadas,1996,1,R.drawable.detectiveconan,0,capxtemp);
 
     //Serie 7
 
@@ -83,7 +84,7 @@ public class metodos {
     temporadas.add("Black Lagoon: Roberta's Blood Trail");
     capxtemp = new int[]{12,12,5};
 
-    Serie serie7= new Serie("Black Lagoon",descripcion,temporadas,2006,3,,0,capxtemp);
+    Serie serie7= new Serie("Black Lagoon",descripcion,temporadas,2006,3,R.drawable.blacklaggon,0,capxtemp);
 
     //Serie 8
 
@@ -93,7 +94,7 @@ public class metodos {
     temporadas.add("Gokushufudou Part 2");
     capxtemp = new int[]{5,5};
 
-    Serie serie8= new Serie("Gokushufudou",descripcion,temporadas,2021,2,,0,capxtemp);
+    Serie serie8= new Serie("Gokushufudou",descripcion,temporadas,2021,2,R.drawable.yakuza,0,capxtemp);
 
     //serie 9
 
@@ -102,7 +103,7 @@ public class metodos {
     temporadas.add("Dororo");
     capxtemp = new int[]{24};
 
-    Serie serie9= new Serie("Dororo",descripcion,temporadas,2021,1,,0,capxtemp);
+    Serie serie9= new Serie("Dororo",descripcion,temporadas,2021,1,R.drawable.dororo,0,capxtemp);
 
     //Serie 10
 
@@ -116,7 +117,7 @@ public class metodos {
     temporadas.add("Initial D Final Stage");
     capxtemp = new int[]{26,13,1,24,14,4};
 
-    Serie serie10= new Serie("Initial D",descripcion,temporadas,1998,6,,0,capxtemp);
+    Serie serie10= new Serie("Initial D",descripcion,temporadas,1998,6,R.drawable.intiald,0,capxtemp);
 
     //Añadimos las series
 
@@ -151,12 +152,12 @@ public class metodos {
     //Cambiar la foto de las estrellas
     public static void cambiodefoto(ImageView imagen,int puntos){
 
-        if(puntos==5){imagen.setImageResource();}
-        else if(puntos==4){imagen.setImageResource();}
-        else if(puntos==3){imagen.setImageResource();}
-        else if(puntos==2){imagen.setImageResource();}
-        else if(puntos==1){imagen.setImageResource();}
-        else{imagen.setImageResource();}
+        if(puntos==5){imagen.setImageResource(R.drawable);}
+        else if(puntos==4){imagen.setImageResource(R.drawable);}
+        else if(puntos==3){imagen.setImageResource(R.drawable);}
+        else if(puntos==2){imagen.setImageResource(R.drawable);}
+        else if(puntos==1){imagen.setImageResource(R.drawable);}
+        else{imagen.setImageResource(R.drawable);}
 
 
     }
