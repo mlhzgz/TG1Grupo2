@@ -32,37 +32,38 @@ public class Datos_serie extends AppCompatActivity {
         EditText capsTemporadas = findViewById(R.id.txtCapsTemp);
         ImageView imgEstrellas = findViewById(R.id.imgEstrellas);
 
-        ArrayList<Serie> series = metodos.arrayseries();
-
+        int serieselec = 0; //<----- este valor lo tiene q traer el INTENT
+        Serie serie = metodos.suichdeseries(serieselec);
+        
         //Cargar la imagen de la serie
 
-        int idImg = series.get(9).getIdimagen();
+        int idImg = serie.getIdimagen();
 
         imgPortada.setImageResource(idImg);
 
         //Para cargar el año de emision de la serie
 
-        String añoEmision = String.valueOf(series.get(9).getAño());
+        String añoEmision = String.valueOf(serie.getAño());
 
-        nombre.setText(series.get(9).getTitulo());
+        nombre.setText(serie.getTitulo());
         anyoEmision.setText(añoEmision);
 
         //Para cargar la descripicon de la serie
 
-        descripcion.setText(series.get(9).getDescripcion());
+        descripcion.setText(serie.getDescripcion());
         descripcion.setFocusable(false);
 
         //Para cargar las temporadas de las series
 
         int numeroTemporadas = 0;
-        numeroTemporadas = series.get(9).getNumerotemporadas();
+        numeroTemporadas = serie.getNumerotemporadas();
 
         String[] temporadaaas = new String[numeroTemporadas];
 
         String temporadasPrimeraSerie = "";
 
         for(int j = 0; j < numeroTemporadas; j++){
-            temporadaaas[j] = String.valueOf(series.get(9).getNombretemporadas());
+            temporadaaas[j] = String.valueOf(serie.getNombretemporadas());
 
             temporadas.setText("\n" + temporadaaas[j] );
         }
@@ -72,13 +73,12 @@ public class Datos_serie extends AppCompatActivity {
         temporadas.setFocusable(false);
 
         //Para cargar los capitulos de las temporadas
-        Serie a= series.get(9);
-        int[] capTemp = a.getCapitulosxtemporadas();
-        int longitud = a.getNumerotemporadas();
+
+        int[] capTemp = serie.getCapitulosxtemporadas();
 
         String caps = "";
 
-        for(int i = 0; i < longitud; i++){
+        for(int i = 0; i < serie.getNumerotemporadas(); i++){
             caps = caps + String.valueOf("\n" + capTemp[i]);
         }
         capsTemporadas.setText(caps);

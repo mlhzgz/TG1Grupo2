@@ -163,9 +163,41 @@ public class metodos {
 }
 
 
-// Metodos para la Clase DATOS_SERIES
+//__________________ Metodos para la Clase DATOS_SERIES________________________
 
-    //Cambiar la puntuacion de una serie
+
+   //metodo para ver que serie a sido seleccionada
+   public static Serie suichdeseries(int id){
+       Serie serieseleccionada = null;
+       switch (id){
+          case 1:  serieseleccionada = cargarserie(0); break;
+          case 2:  serieseleccionada = cargarserie(1); break;
+          case 3:  serieseleccionada = cargarserie(2); break;
+          case 4:  serieseleccionada = cargarserie(3); break;
+          case 5:  serieseleccionada = cargarserie(4); break;
+          case 6:  serieseleccionada = cargarserie(5); break;
+          case 7:  serieseleccionada = cargarserie(6); break;
+          case 8:  serieseleccionada = cargarserie(7); break;
+          case 9:  serieseleccionada = cargarserie(8); break;
+          case 10: serieseleccionada = cargarserie(9); break;
+          default: System.out.println( "Ha habido un error en el Swich de seleccionar serie"); break;
+       }
+       return serieseleccionada;
+   }
+
+   //Metodo que carga un objeto serie con un id para identificarla
+   private static Serie cargarserie(int i) {
+
+
+       ArrayList<Serie> series = arrayseries();
+
+       Serie seleccionada = (Serie) series.get(i);
+
+       return seleccionada;
+
+   }
+
+   //Cambiar la puntuacion de una serie
     public static Serie actualizapuntos(Serie serie,int puntos){
 
         serie.setPuntuacion(puntos);
@@ -192,4 +224,7 @@ public class metodos {
         Toast.makeText( clase,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
 
     }*/
+
+
+
 }
