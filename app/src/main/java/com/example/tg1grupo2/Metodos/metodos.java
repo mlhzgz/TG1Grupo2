@@ -9,13 +9,9 @@ import java.util.ArrayList;
 
 public class metodos {
 
-    public static void mensajedepuntuacion(Class clase){
 
-    Toast.makeText( clase,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
-
-}
-
-    public static ArrayList arrayseries(){
+ //Metodo para Crear las Series
+    public static ArrayList<Serie> arrayseries(){
     ArrayList<Serie> series = new ArrayList<>();
 
     //SERIE 1
@@ -138,6 +134,37 @@ public class metodos {
     return series;
 }
 
-    public 
 
+
+
+
+// Metodos para la Clase DATOS_SERIES
+
+    //Cambiar la puntuacion de una serie
+    public static Serie actualizapuntos(Serie serie,int puntos){
+
+        serie.setPuntuacion(puntos);
+        return serie;
+
+    }
+
+    //Cambiar la foto de las estrellas
+    public static void cambiodefoto(ImageView imagen,int puntos){
+
+        if(puntos==5){imagen.setImageResource();}
+        else if(puntos==4){imagen.setImageResource();}
+        else if(puntos==3){imagen.setImageResource();}
+        else if(puntos==2){imagen.setImageResource();}
+        else if(puntos==1){imagen.setImageResource();}
+        else{imagen.setImageResource();}
+
+
+    }
+
+    //Hacer un Toas para indicar que se ha registrado la puntuacion
+    public static void mensajedepuntuacion(Class clase){
+
+        Toast.makeText( clase,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
+
+    }
 }
