@@ -1,6 +1,9 @@
 package com.example.tg1grupo2.Metodos;
 
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tg1grupo2.Objserie.Serie;
@@ -163,33 +166,114 @@ public class metodos {
 }
 
 
-// Metodos para la Clase DATOS_SERIES
+//__________________ Metodos para la Clase DATOS_SERIES________________________
 
-    //Cambiar la puntuacion de una serie
-    public static Serie actualizapuntos(Serie serie,int puntos){
+   //metodo para ver que serie a sido seleccionada
+   public static Serie suichdeseries(int id){
+       Serie serieseleccionada = null;
+       switch (id){
+          case 1:  serieseleccionada = cargarserie(0); break;
+          case 2:  serieseleccionada = cargarserie(1); break;
+          case 3:  serieseleccionada = cargarserie(2); break;
+          case 4:  serieseleccionada = cargarserie(3); break;
+          case 5:  serieseleccionada = cargarserie(4); break;
+          case 6:  serieseleccionada = cargarserie(5); break;
+          case 7:  serieseleccionada = cargarserie(6); break;
+          case 8:  serieseleccionada = cargarserie(7); break;
+          case 9:  serieseleccionada = cargarserie(8); break;
+          case 10: serieseleccionada = cargarserie(9); break;
+          default: System.out.println( "Ha habido un error en el Swich de seleccionar serie"); break;
+       }
+       return serieseleccionada;
+   }
 
-        serie.setPuntuacion(puntos);
-        return serie;
+   //Metodo que carga un objeto serie con un id para identificarla
+   private static Serie cargarserie(int i) {
+
+
+       ArrayList<Serie> series = arrayseries();
+
+       Serie seleccionada = (Serie) series.get(i);
+
+       return seleccionada;
+
+   }
+
+   //Metodo para Cargar en los campos de texto los datos de la serie
+   public static void cargardatosdelaserie(Serie serie,TextView nombre, TextView anyoEmision, EditText descripcion,EditText temporadas,EditText capsTemporadas, ImageView imgPortada){
+      //Cargar la imagen de la serie
+
+      int idImg = serie.getIdimagen();
+
+      imgPortada.setImageResource(idImg);
+
+      //Para cargar el año de emision de la serie
+
+      String añoEmision = String.valueOf(serie.getAño());
+
+      nombre.setText(serie.getTitulo());
+      anyoEmision.setText(añoEmision);
+
+      //Para cargar la descripicon de la serie
+
+      descripcion.setText(serie.getDescripcion());
+      descripcion.setFocusable(false);
+
+      //Para cargar las temporadas de las series
+
+      int numeroTemporadas = serie.getNumerotemporadas();
+
+      String[] temporadaaas = new String[numeroTemporadas];
+
+      String temporadasPrimeraSerie = "";
+
+      for(int j = 0; j < numeroTemporadas; j++){
+         temporadaaas[j] = String.valueOf(serie.getNombretemporadas());
+
+         temporadas.setText("\n" + temporadaaas[j] );
+      }
+      //temporadasPrimeraSerie = String.valueOf(series.get(9).getNombretemporadas());
+
+
+      temporadas.setFocusable(false);
+
+      //Para cargar los capitulos de las temporadas
+
+      int[] capTemp = serie.getCapitulosxtemporadas();
+
+      String caps = "";
+
+      for(int i = 0; i < serie.getNumerotemporadas(); i++){
+         caps = caps + String.valueOf("\n" + capTemp[i]);
+      }
+      capsTemporadas.setText(caps);
+      capsTemporadas.setFocusable(false);
+
+
+   }
+
+   //Cambiar la foto de las estrellas y la puntuacion
+   public static int cambiodefotoestrellas(int puntos, ImageView imgEstrellas, RadioButton radio1,RadioButton radio2,RadioButton radio3,RadioButton radio4,RadioButton radio5){
+
+       if(radio1.isChecked()){
+          puntos = 1; imgEstrellas.setImageResource(R.drawable.imgunaestrella);
+       }else if(radio2.isChecked()){
+          puntos = 2; imgEstrellas.setImageResource(R.drawable.imgdosestrellas);
+       } else if(radio3.isChecked()){
+          puntos = 3; imgEstrellas.setImageResource(R.drawable.imgtresestrellas);
+       } else if(radio4.isChecked()){
+          puntos = 4; imgEstrellas.setImageResource(R.drawable.imgcuatroestrellas);
+       } else if(radio5.isChecked()){
+          puntos = 5; imgEstrellas.setImageResource(R.drawable.imgcincoestrellas);
+       }else{
+          puntos = 0; imgEstrellas.setImageResource(R.drawable.imgceroestrellas);
+       }
+
+     return puntos;
 
     }
 
-    //Cambiar la foto de las estrellas
-    /*public static void cambiodefoto(ImageView imagen,int puntos){
-
-        if(puntos==5){imagen.setImageResource(R.drawable);}
-        else if(puntos==4){imagen.setImageResource(R.drawable);}
-        else if(puntos==3){imagen.setImageResource(R.drawable);}
-        else if(puntos==2){imagen.setImageResource(R.drawable);}
-        else if(puntos==1){imagen.setImageResource(R.drawable);}
-        else{imagen.setImageResource(R.drawable);}
 
 
-    }*/
 
-    //Hacer un Toast para indicar que se ha registrado la puntuacion
-    /*public static void mensajedepuntuacion(Class clase){
-
-        Toast.makeText( clase,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
-
-    }*/
 }
