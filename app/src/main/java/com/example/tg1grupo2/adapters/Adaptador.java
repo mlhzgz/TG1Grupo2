@@ -1,5 +1,6 @@
 package com.example.tg1grupo2.adapters;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tg1grupo2.Datos_serie;
 import com.example.tg1grupo2.Objserie.Serie;
 import com.example.tg1grupo2.R;
 
@@ -35,11 +37,19 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull Adaptador.ViewHolder holder, int position) {
+        Serie serie = series.get(position);
         holder.Titulo.setText(series.get(position).getTitulo());
         holder.año.setText(String.valueOf(series.get(position).getAño()));
         holder.numerotemporadas.setText(String.valueOf(series.get(position).getNumerotemporadas()));
         holder.idimagen.setImageResource(series.get(position).getIdimagen());
 
+        holder.itemView.setOnClickListener(v ->{
+
+            Intent intento = new Intent(v.getContext(), Datos_serie.class);
+            intento.putExtra("intento",serie );
+            v.getContext().startActivity(intento);
+
+        });
     }
 
     @Override
@@ -60,9 +70,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
             numerotemporadas = itemView.findViewById(R.id.txtTemporadasR);
             idimagen = itemView.findViewById(R.id.imgFoto);
 
-            itemView.setOnClickListener(v->{
 
-            });
         }
     }
 }
