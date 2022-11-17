@@ -20,9 +20,9 @@
 
     <TextView
         android:id="@+id/txtNombre"
-        android:layout_width="210dp"
+        android:layout_width="150dp"
         android:layout_height="49dp"
-        android:text="Nombre de la serie"
+        android:text="Nombre"
         android:textAlignment="viewStart"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -35,7 +35,7 @@
 
     <TextView
         android:id="@+id/txtAnyoEmision"
-        android:layout_width="210dp"
+        android:layout_width="150dp"
         android:layout_height="49dp"
         android:text="Año de emision"
         android:textAlignment="viewStart"
@@ -51,7 +51,7 @@
     <EditText
         android:id="@+id/txtDescripcion"
         android:layout_width="345dp"
-        android:layout_height="180dp"
+        android:layout_height="150dp"
         android:clickable="false"
         android:editable="false"
         android:ems="10"
@@ -59,9 +59,10 @@
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.606"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAnyoEmision"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintVertical_bias="0.167" />
 
     <EditText
         android:id="@+id/txtTemporadas"
@@ -75,10 +76,10 @@
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.286"
+        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDescripcion"
-        app:layout_constraintVertical_bias="0.089" />
+        app:layout_constraintVertical_bias="0.254" />
 
     <EditText
         android:id="@+id/txtCapsTemp"
@@ -87,12 +88,13 @@
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/imgEstrellas"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toEndOf="@+id/txtTemporadas"
         app:layout_constraintTop_toBottomOf="@+id/txtDescripcion"
-        app:layout_constraintVertical_bias="0.397" />
+        app:layout_constraintVertical_bias="0.284" />
 
     <ImageView
         android:id="@+id/imgEstrellas"
@@ -100,9 +102,85 @@
         android:layout_height="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTemporadas"
-        app:layout_constraintVertical_bias="0.358"
+        app:layout_constraintVertical_bias="0.833"
         app:srcCompat="@drawable/imgceroestrellas" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="62dp"
+        android:layout_height="42dp"
+        android:text="Titulo:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtDescripcion"
+        app:layout_constraintEnd_toStartOf="@+id/txtNombre"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toEndOf="@+id/imgPortada"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.169" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="62dp"
+        android:layout_height="42dp"
+        android:text="Año:"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtDescripcion"
+        app:layout_constraintEnd_toStartOf="@+id/txtNombre"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toEndOf="@+id/imgPortada"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.587" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="135dp"
+        android:layout_height="19dp"
+        android:text="Descripcion:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtDescripcion"
+        app:layout_constraintEnd_toStartOf="@+id/txtNombre"
+        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPortada"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="150dp"
+        android:layout_height="22dp"
+        android:text="Temporadas:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtNombre"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="150dp"
+        android:layout_height="22dp"
+        android:text="Capitulos:"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcion"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
