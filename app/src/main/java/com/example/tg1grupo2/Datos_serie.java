@@ -35,9 +35,9 @@ public class Datos_serie extends AppCompatActivity {
         ImageView imgEstrellas = findViewById(R.id.imgEstrellas);
 
         Intent intent = getIntent();
-        int serieselec = intent.getIntExtra("cero", 0);   //<----- este valor lo tiene q traer el INTENT
+        Serie serie = (Serie) intent.getSerializableExtra("intento");   //<----- este valor lo tiene q traer el INTENT
 
-        Serie serie = metodos.suichdeseries(serieselec);
+
 
         metodos.cargardatosdelaserie(serie,nombre,anyoEmision,descripcion,temporadas,capsTemporadas,imgPortada);
 
