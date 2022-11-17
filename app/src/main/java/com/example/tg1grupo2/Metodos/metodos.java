@@ -169,7 +169,7 @@ public class metodos {
 //__________________ Metodos para la Clase DATOS_SERIES________________________
 
    //metodo para ver que serie a sido seleccionada
-   public static Serie suichdeseries(int id){
+   /*public static Serie suichdeseries(int id){
        Serie serieseleccionada = null;
        switch (id){
           case 1:  serieseleccionada = cargarserie(0); break;
@@ -185,7 +185,7 @@ public class metodos {
           default: System.out.println( "Ha habido un error en el Swich de seleccionar serie"); break;
        }
        return serieseleccionada;
-   }
+   }*/
 
    //Metodo que carga un objeto serie con un id para identificarla
    private static Serie cargarserie(int i) {
@@ -223,17 +223,18 @@ public class metodos {
 
       int numeroTemporadas = serie.getNumerotemporadas();
 
-      String[] temporadaaas = new String[numeroTemporadas];
+      ArrayList<String> temporadaaas = serie.getNombretemporadas();
 
       String temporadasPrimeraSerie = "";
 
       for(int j = 0; j < numeroTemporadas; j++){
-         temporadaaas[j] = String.valueOf(serie.getNombretemporadas());
+         //temporadaaas[j] = String.valueOf(serie.getNombretemporadas());
+         temporadasPrimeraSerie += temporadaaas.get(j) + "\n";
 
-         temporadas.setText("\n" + temporadaaas[j] );
+
       }
       //temporadasPrimeraSerie = String.valueOf(series.get(9).getNombretemporadas());
-
+      temporadas.setText(temporadasPrimeraSerie);
 
       temporadas.setFocusable(false);
 
@@ -244,7 +245,7 @@ public class metodos {
       String caps = "";
 
       for(int i = 0; i < serie.getNumerotemporadas(); i++){
-         caps = caps + String.valueOf("\n" + capTemp[i]);
+         caps = caps + capTemp[i] + "\n";
       }
       capsTemporadas.setText(caps);
       capsTemporadas.setFocusable(false);
