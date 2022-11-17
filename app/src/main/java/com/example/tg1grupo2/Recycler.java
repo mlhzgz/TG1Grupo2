@@ -28,4 +28,3 @@ public class Recycler extends AppCompatActivity {
     }
 
 }
-}
