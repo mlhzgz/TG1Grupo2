@@ -3,6 +3,7 @@ package com.example.tg1grupo2.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,7 +28,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
     @Override
     public Adaptador.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.activity_lista,parent,false);
+        View view = inflater.inflate(R.layout.card_layout,parent,false);
 
         return new ViewHolder(view);
     }
@@ -37,8 +38,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
         holder.Titulo.setText(series.get(position).getTitulo());
         holder.año.setText(String.valueOf(series.get(position).getAño()));
         holder.numerotemporadas.setText(String.valueOf(series.get(position).getNumerotemporadas()));
-        holder.idimagen.setText(String.valueOf(series.get(position).getIdimagen()));
-
+        holder.idimagen.setImageResource(series.get(position).getIdimagen());
 
     }
 
@@ -49,24 +49,20 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
-
         public TextView Titulo;
-        public TextView año,numerotemporadas,idimagen;
-
+        public TextView año,numerotemporadas;
+        public ImageView idimagen;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            Titulo = itemView.findViewById(R.id.recyclerView);
-            año = itemView.findViewById(R.id.recyclerView);
-            numerotemporadas = itemView.findViewById(R.id.recyclerView);
-            idimagen = itemView.findViewById(R.id.recyclerView);
+            Titulo = itemView.findViewById(R.id.txtTituloR);
+            año = itemView.findViewById(R.id.txtAñoR);
+            numerotemporadas = itemView.findViewById(R.id.txtTemporadasR);
+            idimagen = itemView.findViewById(R.id.imgFoto);
 
             itemView.setOnClickListener(v->{
 
             });
-
-
-
         }
     }
 }
