@@ -1,8 +1,9 @@
 package com.example.tg1grupo2.Objserie;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Serie {
+public class Serie implements Serializable {
     String Titulo,Descripcion;
     ArrayList<String>nombretemporadas;
     int año,numerotemporadas,idimagen,puntuacion;
