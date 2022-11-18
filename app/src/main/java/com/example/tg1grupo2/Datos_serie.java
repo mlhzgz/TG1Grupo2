@@ -37,8 +37,6 @@ public class Datos_serie extends AppCompatActivity {
         Intent intent = getIntent();
         Serie serie = (Serie) intent.getSerializableExtra("intento");   //<----- este valor lo tiene q traer el INTENT
 
-
-
         metodos.cargardatosdelaserie(serie,nombre,anyoEmision,descripcion,temporadas,capsTemporadas,imgPortada);
 
         //Alert dialog de puntuaciones
