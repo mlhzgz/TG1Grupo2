@@ -28,7 +28,15 @@
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="20dp" />
+                android:layout_height="5dp" />
+
+            <TextView
+                android:id="@+id/txtTituloT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Titulo"
+                android:textSize="10sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtTituloR"
@@ -41,6 +49,14 @@
                 android:layout_height="10dp" />
 
             <TextView
+                android:id="@+id/txtAñoT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Año"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/txtAñoR"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,6 +65,14 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="10dp" />
+
+            <TextView
+                android:id="@+id/txtTemporadasT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temporadas"
+                android:textSize="10sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtTemporadasR"
