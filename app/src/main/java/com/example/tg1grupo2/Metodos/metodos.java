@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class metodos {
 
+   //Metodo para Crear las Series
+   public static ArrayList<Serie> arrayseries(){
 
- //Metodo para Crear las Series
-    public static ArrayList<Serie> arrayseries(){
     ArrayList<Serie> series = new ArrayList<>();
 
     //SERIE 1
@@ -35,7 +35,6 @@ public class metodos {
 
     ArrayList<String> temporadas2 = new ArrayList<>();
 
-
     temporadas2.add("Overlord");
     temporadas2.add("Overlord II");
     temporadas2.add("Overlord III");
@@ -48,7 +47,6 @@ public class metodos {
 
     descripcion = "Un anime de accion y violencia que nos presenta a una organizacion que se dedica a cazar vampiros";
 
-
     ArrayList<String> temporadas3 = new ArrayList<>();
 
     temporadas3.add("Hellsing Ultimate");
@@ -60,7 +58,6 @@ public class metodos {
 
     descripcion = "Un anime de thriller y misterio donde un medico se vera envuelto en un caso de asesinatos en serie";
 
-
     ArrayList<String> temporadas4 = new ArrayList<>();
 
     temporadas4.add("Monster");
@@ -71,7 +68,6 @@ public class metodos {
     //Serie 5
 
     descripcion = "Un anime de accion y ciencia ficcion donde un joven maquinará un elaborado plan para revelarse contra la tirania de un imperio";
-
 
     ArrayList<String> temporadas5 = new ArrayList<>();
 
@@ -85,7 +81,6 @@ public class metodos {
 
     descripcion = "Un anime de misterio donde nos presentaran al Detective de Preparatoria Shinichi Kudo y su objetivo de desenmascarar una peligrosa mafia";
 
-
     ArrayList<String> temporadas6 = new ArrayList<>();
 
     temporadas6.add("Detective Conan");
@@ -96,7 +91,6 @@ public class metodos {
     //Serie 7
 
     descripcion = "Un anime de accion y disparos donde conoceremos a un grupo de cazarecompensas y su dia a dia lidiando con mafias y bandas";
-
 
     ArrayList<String> temporadas7 = new ArrayList<>();
 
@@ -111,7 +105,6 @@ public class metodos {
 
     descripcion = "Un anime de comedia donde un jefe de la yakuza retirado intenta llevar una vida normal junto a su esposa";
 
-
     ArrayList<String> temporadas8 = new ArrayList<>();
 
     temporadas8.add("Gokushufudou");
@@ -124,7 +117,6 @@ public class metodos {
 
     descripcion = "Un anime de accion ambientado en el japon feudal que nos cuenta la historia de un joven maldito pot un demonio";
 
-
     ArrayList<String> temporadas9 = new ArrayList<>();
 
     temporadas9.add("Dororo");
@@ -135,7 +127,6 @@ public class metodos {
     //Serie 10
 
     descripcion = "Un anime de carreras clandestinas de coches";
-
 
     ArrayList<String> temporadas10 = new ArrayList<>();
 
@@ -165,39 +156,7 @@ public class metodos {
     return series;
 }
 
-
 //__________________ Metodos para la Clase DATOS_SERIES________________________
-
-   //metodo para ver que serie a sido seleccionada
-   /*public static Serie suichdeseries(int id){
-       Serie serieseleccionada = null;
-       switch (id){
-          case 1:  serieseleccionada = cargarserie(0); break;
-          case 2:  serieseleccionada = cargarserie(1); break;
-          case 3:  serieseleccionada = cargarserie(2); break;
-          case 4:  serieseleccionada = cargarserie(3); break;
-          case 5:  serieseleccionada = cargarserie(4); break;
-          case 6:  serieseleccionada = cargarserie(5); break;
-          case 7:  serieseleccionada = cargarserie(6); break;
-          case 8:  serieseleccionada = cargarserie(7); break;
-          case 9:  serieseleccionada = cargarserie(8); break;
-          case 10: serieseleccionada = cargarserie(9); break;
-          default: System.out.println( "Ha habido un error en el Swich de seleccionar serie"); break;
-       }
-       return serieseleccionada;
-   }*/
-
-   //Metodo que carga un objeto serie con un id para identificarla
-   private static Serie cargarserie(int i) {
-
-
-       ArrayList<Serie> series = arrayseries();
-
-       Serie seleccionada = (Serie) series.get(i);
-
-       return seleccionada;
-
-   }
 
    //Metodo para Cargar en los campos de texto los datos de la serie
    public static void cargardatosdelaserie(Serie serie,TextView nombre, TextView anyoEmision, EditText descripcion,EditText temporadas,EditText capsTemporadas, ImageView imgPortada){
@@ -231,7 +190,6 @@ public class metodos {
          //temporadaaas[j] = String.valueOf(serie.getNombretemporadas());
          temporadasPrimeraSerie += temporadaaas.get(j) + "\n";
 
-
       }
       //temporadasPrimeraSerie = String.valueOf(series.get(9).getNombretemporadas());
       temporadas.setText(temporadasPrimeraSerie);
@@ -249,7 +207,6 @@ public class metodos {
       }
       capsTemporadas.setText(caps);
       capsTemporadas.setFocusable(false);
-
 
    }
 
@@ -273,8 +230,5 @@ public class metodos {
      return puntos;
 
     }
-
-
-
 
 }
