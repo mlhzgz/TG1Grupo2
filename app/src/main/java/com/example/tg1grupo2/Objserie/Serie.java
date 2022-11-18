@@ -8,8 +8,7 @@ public class Serie implements Serializable {
     ArrayList<String>nombretemporadas;
     int año,numerotemporadas,idimagen,puntuacion;
     int[] capitulosxtemporadas;
-
-
+    
     public Serie(String titulo, String descripcion, ArrayList<String> nombretemporadas, int año, int numerotemporadas, int idimagen, int puntuacion, int[] capitulosxtemporadas) {
         this.Titulo = titulo;
         this.Descripcion = descripcion;
