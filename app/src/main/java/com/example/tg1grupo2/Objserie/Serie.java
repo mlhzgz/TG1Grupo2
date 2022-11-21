@@ -24,32 +24,16 @@ public class Serie implements Serializable {
         return capitulosxtemporadas;
     }
 
-    public void setCapitulosxtemporadas(int[] capitulosxtemporadas) {
-        this.capitulosxtemporadas = capitulosxtemporadas;
-    }
-
     public String getTitulo() {
         return Titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        Titulo = titulo;
     }
 
     public String getDescripcion() {
         return Descripcion;
     }
 
-    public void setDescripcion(String descripcion) {
-        Descripcion = descripcion;
-    }
-
     public ArrayList<String> getNombretemporadas() {
         return nombretemporadas;
-    }
-
-    public void setNombretemporadas(ArrayList<String> nombretemporadas) {
-        this.nombretemporadas = nombretemporadas;
     }
 
     public int getAño() {
@@ -64,18 +48,10 @@ public class Serie implements Serializable {
         return numerotemporadas;
     }
 
-    public void setNumerotemporadas(int numerotemporadas) {
-        this.numerotemporadas = numerotemporadas;
-    }
-
     public int getIdimagen() {
         return idimagen;
     }
-
-    public void setIdimagen(int idimagen) {
-        this.idimagen = idimagen;
-    }
-
+    
     public int getPuntuacion() {
         return puntuacion;
     }
