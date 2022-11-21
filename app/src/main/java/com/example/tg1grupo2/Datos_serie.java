@@ -63,6 +63,10 @@ public class Datos_serie extends AppCompatActivity {
 
                    serie.setPuntuacion(nuevapuntuacion);
 
+                //  Serie a =Recycler.arrayseries.get(serie);
+
+
+
                    Toast.makeText( Datos_serie.this,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
                 }
             });

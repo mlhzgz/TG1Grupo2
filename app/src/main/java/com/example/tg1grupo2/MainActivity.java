@@ -7,6 +7,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 
+import com.example.tg1grupo2.Metodos.metodos;
+import com.example.tg1grupo2.Objserie.Serie;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,9 +20,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Handler handler = new Handler(Looper.myLooper());
+        ArrayList<Serie> arrayseries = metodos.arrayseries();
 
         handler.postDelayed(()->{
             Intent intent = new Intent(MainActivity.this,Recycler.class);
+            intent.putExtra("series",arrayseries);
             startActivity(intent);
             finish();
         },2500);
