@@ -187,9 +187,8 @@ public class metodos {
       String temporadasPrimeraSerie = "";
 
       for(int j = 0; j < numeroTemporadas; j++){
-         //temporadaaas[j] = String.valueOf(serie.getNombretemporadas());
-         temporadasPrimeraSerie += temporadaaas.get(j) + "\n";
 
+         temporadasPrimeraSerie += temporadaaas.get(j) + "\n";
       }
       temporadas.setText(temporadasPrimeraSerie);
 
