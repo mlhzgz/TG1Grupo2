@@ -2,59 +2,64 @@
 
     # Estructuras de datos
 
-        Clase Serie para crear el Objeto Serie con sus parametros:
+        Clase Serie para crear el Objeto Serie con sus parámetros:
             (String titulo, String descripcion, ArrayList<String> nombretemporadas, int año,
                 int numerotemporadas, int idimagen, int puntuacion, int[] capitulosxtemporadas)
 
-    # Estructuras de codigo
+    # Estructuras de código
 
-        Nuestra aplicacion cuenta con un Icono y un Nombre personalizados dentro del movil
+        Nuestra aplicación cuenta con un Icono y un Nombre personalizados dentro del móvil
 
         # actividades
 
             Main_Activity (Splash) : Diego
                 Una pantalla principal con un estilo propio para esa actividad que usaremos como Splash con una duración de 2500ms.
-                Contiene una imagen del Titulo de nuestra Aplicacion
+                Contiene una imagen del Titulo de nuestra Aplicación
                     -Imagen / (ImageView)
 
             Lista_Activity : Daniel
-                Una pantalla donde se mostrara un Recycler View para mostrar la lista de las series, mostrando un CardView que contiene:
+                Una pantalla donde se mostrará un Recycler View para mostrar la lista de las series, mostrando un CardView que contiene:
                    -Imagen de la portada / (ImageView)
                    -Titulo / (TextView)
                    -Año de lanzamiento / (TextView)
 
-                Esta actividad tiene un titulo personalizado en el ActionBar (Listado Anime)
+                Esta actividad tiene un título personalizado en el ActionBar (Listado Anime)
 
             Datos_Serie : Sergio
-                Una pantalla que mostrara todos los datos de la serie seleccionada, mostrando:
+                Una pantalla que mostrará todos los datos de la serie seleccionada, mostrando:
                     -Imagen de la portada / (ImageView)
-                    -Titulo / (TextView)
+                    -Título / (TextView)
                     -Año de lanzamiento / (TextView)
-                    -Descripcion corta de la serie / (MultilineText)
-                    -Titulos de las temporadas y capitulos que tinen cada una / (MultilineText)
-                    -Imagen de estrellas para la puntuacion  / (ImageView) (*1)
+                    -Descripción corta de la serie / (MultilineText)
+                    -Títulos de las temporadas y capítulos que tienen cada una / (MultilineText)
+                    -Imagen de estrellas para la puntuación  / (ImageView) (*1)
 
                 (*1)
-                Esta imagen tiene un metodo OnClickListener
-                 el cual no abrira un Alertdialog con cinco RadioButton
+                Esta imagen tiene un método OnClickListener
+                 el cuál no abrirá un Alertdialog con cinco RadioButton
                     para hacer las puntuaciones de las series
 
-                Esta actividad tiene un titulo personalizado en el ActionBar (Datos de la Serie)
+                Esta actividad tiene un título personalizado en el ActionBar (Datos de la Serie)
 
         # Clases
 
             Clase Adaptadores : Diego
             Una clase con el adaptador para el RecyclerView
 
-            Clase Metodos : Guillermo
-            Una Clase con todos los metodos usados en la aplicacion
+            Clase Métodos : Guillermo
+            Una Clase con todos los métodos usados en la aplicacion
                 -arrayseries()
                 -cargardatosdelaserie()
                 -cambiodefotoestrellas()
 
 
-        # logica de negocio (toda la programacion que organiza el funcionamiento de la aplicacion) (interface)
+        # lógica de negocio (toda la programación que organiza el funcionamiento de la aplicación) (interface)
 
-        # Descripcion del proyecto (que efecto va a tener cada error o cada acierto dentro de la aplicacion)
+        # Descripción del proyecto (que efecto va a tener cada error o cada acierto dentro de la aplicacion)
+            La aplicación comienza con una ventana a pantalla completa que contiene el nombre de nuestra aplicación,
+            después de esperar 2500ms pasará automáticamente a la siguiente ventana, la cuál contiene un listado
+            de las 10 series que tenemos. En esta ventana puedes clickar en una de las series y esto te llevará a otra ventana
+            en la que se mostrarán todos los datos de la serie y tendrás la posibilidad de puntuar la serie seleccionada.
+            (La puntuación la podrás cambiar tantas veces como quieras).
 
             
