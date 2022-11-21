@@ -2,25 +2,59 @@
 
     # Estructuras de datos
 
+        Clase Serie para crear el Objeto Serie con sus parametros:
+            (String titulo, String descripcion, ArrayList<String> nombretemporadas, int año,
+                int numerotemporadas, int idimagen, int puntuacion, int[] capitulosxtemporadas)
+
     # Estructuras de codigo
+
+        Nuestra aplicacion cuenta con un Icono y un Nombre personalizados dentro del movil
+
         # actividades
 
-            Main_Activity:
-                Una pantalla principal que usaremos como Splash con un Titulo para nuestra Aplicacion
+            Main_Activity (Splash) : Diego
+                Una pantalla principal con un estilo propio para esa actividad que usaremos como Splash con una duración de 2500ms.
+                Contiene una imagen del Titulo de nuestra Aplicacion
+                    -Imagen / (ImageView)
 
-            Lista_Activity
-                Una pantalla donde se mostrara un Recycler View para mostrar una lista de series
+            Lista_Activity : Daniel
+                Una pantalla donde se mostrara un Recycler View para mostrar la lista de las series, mostrando un CardView que contiene:
+                   -Imagen de la portada / (ImageView)
+                   -Titulo / (TextView)
+                   -Año de lanzamiento / (TextView)
 
-            Datos_Serie
-                Una pantalla que mostrara todos los datos de una serie, esta pantalla contiene un Alertdialog para las puntuaciones de las series
+                Esta actividad tiene un titulo personalizado en el ActionBar (Listado Anime)
+
+            Datos_Serie : Sergio
+                Una pantalla que mostrara todos los datos de la serie seleccionada, mostrando:
+                    -Imagen de la portada / (ImageView)
+                    -Titulo / (TextView)
+                    -Año de lanzamiento / (TextView)
+                    -Descripcion corta de la serie / (MultilineText)
+                    -Titulos de las temporadas y capitulos que tinen cada una / (MultilineText)
+                    -Imagen de estrellas para la puntuacion  / (ImageView) (*1)
+
+                (*1)
+                Esta imagen tiene un metodo OnClickListener
+                 el cual no abrira un Alertdialog con cinco RadioButton
+                    para hacer las puntuaciones de las series
+
+                Esta actividad tiene un titulo personalizado en el ActionBar (Datos de la Serie)
 
         # Clases
-            Tenemos una Clase Adaptadores en un paquete a parte
-            Otra Clase Metodos para organizar ahi el codigo
-            y una Clase Serie para crear los objetos serie
+
+            Clase Adaptadores : Diego
+            Una clase con el adaptador para el RecyclerView
+
+            Clase Metodos : Guillermo
+            Una Clase con todos los metodos usados en la aplicacion
+                -arrayseries()
+                -cargardatosdelaserie()
+                -cambiodefotoestrellas()
+
 
         # logica de negocio (toda la programacion que organiza el funcionamiento de la aplicacion) (interface)
 
         # Descripcion del proyecto (que efecto va a tener cada error o cada acierto dentro de la aplicacion)
 
-            Al clicar en el icono de las estrellas en cada Serie , el usuario tendra la posibilidad de cambiar la puntuacion de esa serie
+            
