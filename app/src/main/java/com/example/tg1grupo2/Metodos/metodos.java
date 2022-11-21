@@ -191,7 +191,6 @@ public class metodos {
          temporadasPrimeraSerie += temporadaaas.get(j) + "\n";
 
       }
-      //temporadasPrimeraSerie = String.valueOf(series.get(9).getNombretemporadas());
       temporadas.setText(temporadasPrimeraSerie);
 
       temporadas.setFocusable(false);
@@ -228,7 +227,5 @@ public class metodos {
        }
 
      return puntos;
-
     }
-
 }
