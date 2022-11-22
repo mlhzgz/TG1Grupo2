@@ -37,6 +37,8 @@ public class Datos_serie extends AppCompatActivity {
         Intent intent = getIntent();
         Serie serie = (Serie) intent.getSerializableExtra("intento");   //<----- este valor lo tiene q traer el INTENT
 
+        metodos.estrellas(serie,imgEstrellas);
+
         metodos.cargardatosdelaserie(serie,nombre,anyoEmision,descripcion,temporadas,capsTemporadas,imgPortada);
 
         //Alert dialog de puntuaciones
@@ -62,10 +64,6 @@ public class Datos_serie extends AppCompatActivity {
                    int nuevapuntuacion = metodos.cambiodefotoestrellas(serie.getPuntuacion(), imgEstrellas,radio1,radio2,radio3,radio4,radio5);
 
                    serie.setPuntuacion(nuevapuntuacion);
-
-                //  Serie a =Recycler.arrayseries.get(serie);
-
-
 
                    Toast.makeText( Datos_serie.this,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
                 }

@@ -227,4 +227,23 @@ public class metodos {
 
      return puntos;
     }
+
+    public static void estrellas(Serie serie,ImageView imgEstrellas) {
+
+        if(serie.getPuntuacion()==5){
+            imgEstrellas.setImageResource(R.drawable.imgcincoestrellas);}
+
+        else if(serie.getPuntuacion()==4){
+            imgEstrellas.setImageResource(R.drawable.imgcuatroestrellas);
+        } else if(serie.getPuntuacion()==3){
+            imgEstrellas.setImageResource(R.drawable.imgtresestrellas);
+        } else if(serie.getPuntuacion()==2){
+            imgEstrellas.setImageResource(R.drawable.imgdosestrellas);
+        } else if(serie.getPuntuacion()==1){
+            imgEstrellas.setImageResource(R.drawable.imgunaestrella);
+        }else{
+            imgEstrellas.setImageResource(R.drawable.imgceroestrellas);
+        }
+
+    }
 }
