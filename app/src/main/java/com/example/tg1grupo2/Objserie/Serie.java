@@ -4,12 +4,14 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Serie implements Serializable {
+    private final int Id;
     String Titulo,Descripcion;
     ArrayList<String>nombretemporadas;
     int año,numerotemporadas,idimagen,puntuacion;
     int[] capitulosxtemporadas;
     
-    public Serie(String titulo, String descripcion, ArrayList<String> nombretemporadas, int año, int numerotemporadas, int idimagen, int puntuacion, int[] capitulosxtemporadas) {
+    public Serie(int id,String titulo, String descripcion, ArrayList<String> nombretemporadas, int año, int numerotemporadas, int idimagen, int puntuacion, int[] capitulosxtemporadas) {
+        this.Id = id;
         this.Titulo = titulo;
         this.Descripcion = descripcion;
         this.nombretemporadas = nombretemporadas;
@@ -18,6 +20,10 @@ public class Serie implements Serializable {
         this.idimagen = idimagen;
         this.puntuacion = puntuacion;
         this.capitulosxtemporadas = capitulosxtemporadas;
+    }
+
+    public int getId() {
+        return Id;
     }
 
     public int[] getCapitulosxtemporadas() {
@@ -38,10 +44,6 @@ public class Serie implements Serializable {
 
     public int getAño() {
         return año;
-    }
-
-    public void setAño(int año) {
-        this.año = año;
     }
 
     public int getNumerotemporadas() {

@@ -61,9 +61,9 @@ public class Datos_serie extends AppCompatActivity {
                     RadioButton radio4 = vista.findViewById(R.id.radio4);
                     RadioButton radio5 = vista.findViewById(R.id.radio5);
 
-                   int nuevapuntuacion = metodos.cambiodefotoestrellas(serie.getPuntuacion(), imgEstrellas,radio1,radio2,radio3,radio4,radio5);
-
-                   serie.setPuntuacion(nuevapuntuacion);
+                    int nuevapuntuacion = metodos.cambiodefotoestrellas(radio1,radio2,radio3,radio4,radio5);
+                    serie.setPuntuacion(nuevapuntuacion);
+                    metodos.estrellas(serie,imgEstrellas);
 
                    Toast.makeText( Datos_serie.this,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
                 }

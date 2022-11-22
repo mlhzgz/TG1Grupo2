@@ -27,7 +27,7 @@ public class metodos {
 
     int[] capxtemp = {12 , 1};
 
-    Serie serie1 = new Serie("Youjo Senki",descripcion, temporadas,2017,2,R.drawable.youjosenki,0,capxtemp);
+    Serie serie1 = new Serie(0,"Youjo Senki",descripcion, temporadas,2017,2,R.drawable.youjosenki,0,capxtemp);
 
     //SERIE 2
 
@@ -41,7 +41,7 @@ public class metodos {
     temporadas2.add("Overlord IV");
     capxtemp = new int[]{13,13,13,13};
 
-    Serie serie2= new Serie("Overlord",descripcion,temporadas2,2015,4,R.drawable.overlord,0,capxtemp);
+    Serie serie2= new Serie(1,"Overlord",descripcion,temporadas2,2015,4,R.drawable.overlord,0,capxtemp);
 
     //SERIE 3
 
@@ -52,7 +52,7 @@ public class metodos {
     temporadas3.add("Hellsing Ultimate");
     capxtemp = new int[]{10};
 
-    Serie serie3= new Serie("Hellsing Ultimate",descripcion,temporadas3,2006,1,R.drawable.hellsing,0,capxtemp);
+    Serie serie3= new Serie(2,"Hellsing Ultimate",descripcion,temporadas3,2006,1,R.drawable.hellsing,0,capxtemp);
 
     //SERIE 4
 
@@ -63,7 +63,7 @@ public class metodos {
     temporadas4.add("Monster");
     capxtemp = new int[]{74};
 
-    Serie serie4= new Serie("Monster",descripcion,temporadas4,2004,1,R.drawable.monster,0,capxtemp);
+    Serie serie4= new Serie(3,"Monster",descripcion,temporadas4,2004,1,R.drawable.monster,0,capxtemp);
 
     //Serie 5
 
@@ -75,7 +75,7 @@ public class metodos {
     temporadas5.add("Code Geass: Hangyaku no Lelouch R2");
     capxtemp = new int[]{25,25};
 
-    Serie serie5= new Serie("Code Geass: Hangyaku no Lelouch",descripcion,temporadas5,2006,2,R.drawable.codegeas,0,capxtemp);
+    Serie serie5= new Serie(4,"Code Geass: Hangyaku no Lelouch",descripcion,temporadas5,2006,2,R.drawable.codegeas,0,capxtemp);
 
     //Serie 6
 
@@ -86,7 +86,7 @@ public class metodos {
     temporadas6.add("Detective Conan");
     capxtemp = new int[]{1050};
 
-    Serie serie6= new Serie("Detective Conan",descripcion,temporadas6,1996,1,R.drawable.detectiveconan,0,capxtemp);
+    Serie serie6= new Serie(5,"Detective Conan",descripcion,temporadas6,1996,1,R.drawable.detectiveconan,0,capxtemp);
 
     //Serie 7
 
@@ -99,7 +99,7 @@ public class metodos {
     temporadas7.add("Black Lagoon: Roberta's Blood Trail");
     capxtemp = new int[]{12,12,5};
 
-    Serie serie7= new Serie("Black Lagoon",descripcion,temporadas7,2006,3,R.drawable.blacklaggon,0,capxtemp);
+    Serie serie7= new Serie(6,"Black Lagoon",descripcion,temporadas7,2006,3,R.drawable.blacklaggon,0,capxtemp);
 
     //Serie 8
 
@@ -111,7 +111,7 @@ public class metodos {
     temporadas8.add("Gokushufudou Part 2");
     capxtemp = new int[]{5,5};
 
-    Serie serie8= new Serie("Gokushufudou",descripcion,temporadas8,2021,2,R.drawable.yakuza,0,capxtemp);
+    Serie serie8= new Serie(7,"Gokushufudou",descripcion,temporadas8,2021,2,R.drawable.yakuza,0,capxtemp);
 
     //serie 9
 
@@ -122,7 +122,7 @@ public class metodos {
     temporadas9.add("Dororo");
     capxtemp = new int[]{24};
 
-    Serie serie9= new Serie("Dororo",descripcion,temporadas9,2021,1,R.drawable.dororo,0,capxtemp);
+    Serie serie9= new Serie(8,"Dororo",descripcion,temporadas9,2021,1,R.drawable.dororo,0,capxtemp);
 
     //Serie 10
 
@@ -138,7 +138,7 @@ public class metodos {
     temporadas10.add("Initial D Final Stage");
     capxtemp = new int[]{26,13,1,24,14,4};
 
-    Serie serie10= new Serie("Initial D",descripcion,temporadas10,1998,6,R.drawable.intiald,0,capxtemp);
+    Serie serie10= new Serie(9,"Initial D",descripcion,temporadas10,1998,6,R.drawable.intiald,0,capxtemp);
 
     //Añadimos las series
 
@@ -182,13 +182,13 @@ public class metodos {
 
       int numeroTemporadas = serie.getNumerotemporadas();
 
-      ArrayList<String> temporadaaas = serie.getNombretemporadas();
+      ArrayList<String> arraytemporadas = serie.getNombretemporadas();
 
       String temporadasPrimeraSerie = "";
 
       for(int j = 0; j < numeroTemporadas; j++){
 
-         temporadasPrimeraSerie += temporadaaas.get(j) + "\n";
+         temporadasPrimeraSerie += arraytemporadas.get(j) + "\n";
       }
       temporadas.setText(temporadasPrimeraSerie);
 
@@ -208,31 +208,30 @@ public class metodos {
 
    }
 
-   //Cambiar la foto de las estrellas y la puntuacion
-   public static int cambiodefotoestrellas(int puntos, ImageView imgEstrellas, RadioButton radio1,RadioButton radio2,RadioButton radio3,RadioButton radio4,RadioButton radio5){
-
+   //Selecciona la puntuacion segun el boton pulsado
+   public static int cambiodefotoestrellas( RadioButton radio1,RadioButton radio2,RadioButton radio3,RadioButton radio4,RadioButton radio5){
+       int puntos;
        if(radio1.isChecked()){
-          puntos = 1; imgEstrellas.setImageResource(R.drawable.imgunaestrella);
+          puntos = 1;
        }else if(radio2.isChecked()){
-          puntos = 2; imgEstrellas.setImageResource(R.drawable.imgdosestrellas);
+          puntos = 2;
        } else if(radio3.isChecked()){
-          puntos = 3; imgEstrellas.setImageResource(R.drawable.imgtresestrellas);
+          puntos = 3;
        } else if(radio4.isChecked()){
-          puntos = 4; imgEstrellas.setImageResource(R.drawable.imgcuatroestrellas);
+          puntos = 4;
        } else if(radio5.isChecked()){
-          puntos = 5; imgEstrellas.setImageResource(R.drawable.imgcincoestrellas);
+          puntos = 5;
        }else{
-          puntos = 0; imgEstrellas.setImageResource(R.drawable.imgceroestrellas);
+          puntos = 0;
        }
-
      return puntos;
     }
 
+    //Cambiar la foto de las estrellas dependiendo de la puntuacion
     public static void estrellas(Serie serie,ImageView imgEstrellas) {
 
         if(serie.getPuntuacion()==5){
             imgEstrellas.setImageResource(R.drawable.imgcincoestrellas);}
-
         else if(serie.getPuntuacion()==4){
             imgEstrellas.setImageResource(R.drawable.imgcuatroestrellas);
         } else if(serie.getPuntuacion()==3){
