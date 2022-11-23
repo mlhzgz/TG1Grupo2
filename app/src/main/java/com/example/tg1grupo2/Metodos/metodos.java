@@ -4,7 +4,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.tg1grupo2.Objserie.Serie;
 import com.example.tg1grupo2.R;
@@ -209,7 +208,7 @@ public class metodos {
    }
 
    //Selecciona la puntuacion segun el boton pulsado
-   public static int cambiodefotoestrellas( RadioButton radio1,RadioButton radio2,RadioButton radio3,RadioButton radio4,RadioButton radio5){
+   public static int cambioPuntuacion(RadioButton radio1, RadioButton radio2, RadioButton radio3, RadioButton radio4, RadioButton radio5){
        int puntos;
        if(radio1.isChecked()){
           puntos = 1;
