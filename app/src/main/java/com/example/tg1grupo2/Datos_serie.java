@@ -61,11 +61,11 @@ public class Datos_serie extends AppCompatActivity {
                     RadioButton radio4 = vista.findViewById(R.id.radio4);
                     RadioButton radio5 = vista.findViewById(R.id.radio5);
 
-                    int nuevapuntuacion = metodos.cambiodefotoestrellas(radio1,radio2,radio3,radio4,radio5);
-                    serie.setPuntuacion(nuevapuntuacion);
-                    metodos.estrellas(serie,imgEstrellas);
+                    int nuevapuntuacion = metodos.cambioPuntuacion(radio1,radio2,radio3,radio4,radio5);
+                    MainActivity.arrayseries.get(serie.getId()).setPuntuacion(nuevapuntuacion);
+                    metodos.estrellas(MainActivity.arrayseries.get(serie.getId()),imgEstrellas);
+                    Toast.makeText( Datos_serie.this,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
 
-                   Toast.makeText( Datos_serie.this,"Puntuacion Actualizada",Toast.LENGTH_LONG).show();
                 }
             });
 
@@ -73,7 +73,7 @@ public class Datos_serie extends AppCompatActivity {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
 
-                    serie.setPuntuacion(0);
+                    MainActivity.arrayseries.get(serie.getId()).setPuntuacion(0);
                     imgEstrellas.setImageResource(R.drawable.imgceroestrellas);
                     Toast.makeText( Datos_serie.this,"Puntuacion Borrada",Toast.LENGTH_LONG).show();
                 }

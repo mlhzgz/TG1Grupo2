@@ -14,21 +14,18 @@ import com.example.tg1grupo2.adapters.Adaptador;
 import java.util.ArrayList;
 
 public class Recycler extends AppCompatActivity {
-    static ArrayList <Serie>  arrayseries;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
-
-        Intent intent = getIntent();
-        arrayseries = (ArrayList<Serie>) intent.getSerializableExtra("series");
 
         RecyclerView recycler = findViewById(R.id.recycler);
         recycler.setHasFixedSize(true);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(layoutManager);
-        recycler.setAdapter(new Adaptador(arrayseries));
+        recycler.setAdapter(new Adaptador(MainActivity.arrayseries));
     }
 
 }
